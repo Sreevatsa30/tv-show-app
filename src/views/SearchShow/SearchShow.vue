@@ -10,7 +10,7 @@
 <script>
 import ShowDetail from "@/components/ShowDetail/ShowDetail.vue";
 import { mapState } from "vuex";
-import { HOMEVIEW } from "@/constants/constants";
+// import { HOMEVIEW } from "@/constants/constants";
 
 export default {
   name: "SearchShow",
@@ -18,9 +18,9 @@ export default {
     ...mapState(["tvShowsList"]),
   },
   created() {
-    if (!this.tvShowsList.length) {
-      this.$router.push({ name: HOMEVIEW });
-    }
+    // if (!this.tvShowsList.length) {
+    //   this.$router.push({ name: HOMEVIEW });
+    // }
   },
   components: {
     ShowDetail,
