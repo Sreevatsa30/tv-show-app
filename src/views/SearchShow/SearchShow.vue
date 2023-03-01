@@ -10,17 +10,11 @@
 <script>
 import ShowDetail from "@/components/ShowDetail/ShowDetail.vue";
 import { mapState } from "vuex";
-// import { HOMEVIEW } from "@/constants/constants";
 
 export default {
   name: "SearchShow",
   computed: {
     ...mapState(["tvShowsList"]),
-  },
-  created() {
-    // if (!this.tvShowsList.length) {
-    //   this.$router.push({ name: HOMEVIEW });
-    // }
   },
   components: {
     ShowDetail,

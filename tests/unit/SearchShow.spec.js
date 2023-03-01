@@ -30,20 +30,4 @@ describe("SearchShow.vue", () => {
   it("is a Vue instance", () => {
     expect(wrapper.vm).toBeTruthy();
   });
-
-  it("Should navigate to Home page if tvShowsList is empty", () => {
-    const spyCreatedHook = jest.spyOn(SearchShow, "created");
-    wrapper = mount(SearchShow, {
-      global: {
-        plugins: [store],
-        mocks: {
-          $router: {
-            push: jest.fn(),
-          },
-        },
-      },
-    });
-    expect(spyCreatedHook).toHaveBeenCalled();
-    expect(wrapper.vm.$router.push).toHaveBeenCalledWith({ name: HOMEVIEW });
-  });
 });
