@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       sortedList: [],
-      genres: ["Action", "Comedy", "Crime", "Drama"],
+      genres: new Set(),
     };
   },
   methods: {
@@ -38,9 +38,15 @@ export default {
         console.log(error);
       }
     }
+    this.allShowsList.forEach((show) => {
+      show.genres.forEach((genre) => {
+        console.log(genre);
+        this.genres.add(genre);
+      })
+    });
     this.genres.forEach((genre) => {
       this.sortedList[genre] = this.allShowsList.filter((show) => {
-        return show.genres.includes(genre) && show.rating.average > 8.5;
+        return show.genres.includes(genre);
       });
     });
   },

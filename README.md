@@ -6,7 +6,7 @@ tv-show-app is an application used to display tv shows based on genre and rating
 Vuejs is an approachable, performant and versatile Javascript framework for building web user interfaces.
 
 ## Latest Version
-0.1.0
+0.1.1
 
 
 
@@ -50,4 +50,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## Release Notes
+- **0.1.1** - Added dynamic function
 - **0.1.0** - Initial version
